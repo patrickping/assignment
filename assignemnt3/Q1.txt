@@ -1,0 +1,173 @@
+[0;35m
+ATTENTION: No cipher mapping file found![m
+Please note from 2.9dev on testssl.sh needs files in "$TESTSSL_INSTALL_DIR/etc/" to function correctly.
+
+[0;35mType "yes" to ignore this warning and proceed at your own risk --> [m[0;35m
+ATTENTION: No TLS data file found -- needed for socket based handshakes[m
+Please note from 2.9dev on testssl.sh needs files in "$TESTSSL_INSTALL_DIR/etc/" to function correctly.
+
+[0;35mType "yes" to ignore this warning and proceed at your own risk --> [m[1m
+###########################################################
+    testssl.sh       2.9.5 from [m[1mhttps://testssl.sh/[m
+[1m
+      This program is free software. Distribution and
+             modification under GPLv2 permitted.
+      USAGE w/o ANY WARRANTY. USE IT AT YOUR OWN RISK!
+
+       Please file bugs @ [m[1mhttps://testssl.sh/bugs/[m
+[1m
+###########################################################[m
+
+ Using "OpenSSL 1.0.2g  1 Mar 2016" [~124 ciphers]
+ on searphimlyx-GL552VW:/usr/bin/openssl
+ (built: "reproducible build, date unspecified", platform: "debian-amd64")
+
+
+[7m Start 2017-11-21 21:45:21        -->> 127.0.0.1:443 (www.yliu2867.com) <<--[m
+
+ A record via            /etc/hosts 
+ rDNS (127.0.0.1):       localhost.
+ Service detected:       HTTP
+
+
+[1m[4m Testing protocols [m[4mvia sockets except SPDY+HTTP2 [m
+
+[1m SSLv2      [m[1;32mnot offered (OK)[m
+[1m SSLv3      [m[1;32mnot offered (OK)[m
+[1m TLS 1      [mnot offered
+[1m TLS 1.1    [mnot offered
+[1m TLS 1.2    [m[0;33mnot offered[m
+[1m SPDY/NPN   [mnot offered
+[1m HTTP2/ALPN [mhttp/1.1 (offered)
+
+[1m[4m Testing ~standard cipher categories [m
+
+[1m NULL ciphers (no encryption)                  [m[1;32mnot offered (OK)[m
+[1m Anonymous NULL Ciphers (no authentication)    [m[1;32mnot offered (OK)[m
+[1m Export ciphers (w/o ADH+NULL)                 [m[1;32mnot offered (OK)[m
+[1m LOW: 64 Bit + DES encryption (w/o export)     [m[1;32mnot offered (OK)[m
+[1m Weak 128 Bit ciphers (SEED, IDEA, RC[2,4])    [m[0;32mnot offered (OK)[m
+[1m Triple DES Ciphers (Medium)                   [mnot offered (OK)
+[1m High encryption (AES+Camellia, no AEAD)       [m[0;32moffered (OK)[m
+[1m Strong encryption (AEAD ciphers)              [m[1;32moffered (OK)[m
+
+
+[1m[4m Testing robust (perfect) forward secrecy[m[4m, (P)FS -- omitting Null Authentication/Encryption, 3DES, RC4 [m
+[0;35m Cipher mapping not available, doing a fallback to openssl[m
+
+[0;32m PFS is offered (OK)[m                        
+
+
+[1m[4m Testing server preferences [m
+
+[1m Has server cipher order?     [m[0;31mnope (NOT ok)[m
+[1m Negotiated protocol          [m[1;32mTLSv1.2[m
+[1m Negotiated cipher            [m[1;32mECDHE-RSA-AES256-GCM-SHA384[m, [0;32m256 bit ECDH (P-256)[m (limited sense as client will pick)
+[1m Negotiated cipher per proto[m  (limited sense as client will pick)
+     (SSLv2: [0;35mLocal problem: /usr/bin/openssl doesn't support "s_client -ssl2"[m)
+     ECDHE-RSA-AES256-SHA:                               TLSv1, TLSv1.1
+     ECDHE-RSA-AES256-GCM-SHA384:                        TLSv1.2
+ No further cipher order check has been done as order is determined by the client
+
+
+[1m[4m Testing server defaults (Server Hello) [m
+
+[1m TLS extensions (standard)    [m"server name/#0" "renegotiation info/#65281"
+                              "EC point formats/#11" "session ticket/#35"
+                              "heartbeat/#15"
+                              "application layer protocol negotiation/#16"
+[1m Session Ticket RFC 5077 hint [m300 seconds, session tickets keys seems to be rotated < daily
+[1m SSL Session ID support       [myes
+[1m Session Resumption           [mTickets: yes, ID: yes
+[1m TLS clock skew[m               [0;35mSSLv3 through TLS 1.2 didn't return a timestamp[m
+[1m Signature Algorithm          [m[0;32mSHA256 with RSA[m
+[1m Server key size              [mRSA [0;32m4096[m bits
+[1m Fingerprint / Serial         [mSHA1 761C1CD6C7783ED6096D2F33B69D5F419AFEA62C / B4944003ECCFDCC8
+                              SHA256 8D447B8DCAFA30A8F61CBB1104BE109F2690FAA88E4B6009AC8DDD9F880AD174
+[1m Common Name (CN)             [m[3mwww.yliu2867.com[m
+[1m subjectAltName (SAN)         [m[3mwww.yliu2867.com [m
+[1m Issuer                       [m[3mMy Fake CA[m ([3mWESTERN[m from [3mCA[m)
+[1m Trust (hostname)             [m[0;32mOk via SAN and CN[m (same w/o SNI)
+[1m Chain of trust[m               [0;35m"/home/searphimlyx/ssl/etc/*.pem" cannot be found / not readable[m
+[1m EV cert[m (experimental)       no 
+[1m Certificate Expiration       [m[0;33mexpires < 60 days (59)[m (2017-11-21 21:27 --> 2018-01-20 21:27 -0500)
+[1m # of certificates provided[m   1
+[1m Certificate Revocation List  [m[0;31mNOT ok --[m neither CRL nor OCSP URI provided
+[1m OCSP URI                     [m--
+[1m OCSP stapling                [m--
+[1m OCSP must staple             [mno
+[1m DNS CAA RR[m (experimental)    [1;33m--[m
+[1m Certificate Transparency     [mno
+
+
+[1m[4m Testing HTTP header response @ "/" [m
+
+[1m HTTP Status Code           [m  200 OK
+[1m HTTP clock skew              [m0 sec from localtime
+[1m Strict Transport Security    [m--
+[1m Public Key Pinning           [m--
+[1m Server banner                [mApache/[33m2(B[m.[33m4(B[m.[33m1(B[m[33m8(B[m ([33m[1mUbuntu(B[m)
+[1m Application banner           [m--
+[1m Cookie(s)                    [m(none issued at "/")
+[1m Security headers             [m[0;33m--[m
+[1m Reverse Proxy banner         [m--
+
+
+[1m[4m Testing vulnerabilities [m
+
+[1m Heartbleed[m (CVE-2014-0160)                [1;32mnot vulnerable (OK)[m, timed out
+[1m CCS[m (CVE-2014-0224)                       [1;32mnot vulnerable (OK)[m
+[1m Ticketbleed[m (CVE-2016-9244), experiment.  [1;32mnot vulnerable (OK)[m
+[1m Secure Renegotiation [m(CVE-2009-3555)      [1;32mnot vulnerable (OK)[m
+[1m Secure Client-Initiated Renegotiation     [m[0;32mnot vulnerable (OK)[m
+[1m CRIME, TLS [m(CVE-2012-4929)                [0;35mtest failed (couldn't connect)[m
+[1m BREACH[m (CVE-2013-3587)                    [0;31mpotentially NOT ok, uses gzip HTTP compression.[m - only supplied "/" tested
+                                           Can be ignored for static pages or if no secrets in the page
+[1m POODLE, SSL[m (CVE-2014-3566)               [1;32mnot vulnerable (OK)[m
+[1m TLS_FALLBACK_SCSV[m (RFC 7507)              [0;32mDowngrade attack prevention supported (OK)[m
+[1m SWEET32[m (CVE-2016-2183, CVE-2016-6329)    [1;32mnot vulnerable (OK)[m
+[1m FREAK[m (CVE-2015-0204)                     [1;32mnot vulnerable (OK)[m
+[1m DROWN[m (CVE-2016-0800, CVE-2016-0703)      [1;32mnot vulnerable on this host and port (OK)[m
+                                           make sure you don't use this certificate elsewhere with SSLv2 enabled services
+                                           https://censys.io/ipv4?q=8D447B8DCAFA30A8F61CBB1104BE109F2690FAA88E4B6009AC8DDD9F880AD174 could help you to find out
+[1m LOGJAM[m (CVE-2015-4000), experimental      [0;35mLocal problem: couldn't read common primes file /home/searphimlyx/ssl/etc/common-primes.txt[m
+                                           [0;32mpartly not vulnerable:[m no DH EXPORT ciphers
+[1m BEAST[m (CVE-2011-3389)                     TLS1: [1;33m          [m
+                                           [1;33mVULNERABLE[m -- but also supports higher protocols (possible mitigation): TLSv1.1 TLSv1.2
+[1m LUCKY13[m (CVE-2013-0169), experimental     potentially [1;33mVULNERABLE[m, uses cipher block chaining (CBC) ciphers with TLS
+[1m RC4[m (CVE-2013-2566, CVE-2015-2808)        [0;32mno RC4 ciphers detected (OK)[m
+
+
+[1m[4m Testing all 124 locally available ciphers against the server, ordered by encryption strength [m
+[0;35m Cipher mapping not available, doing a fallback to openssl[m
+
+Hexcode  Cipher Suite Name (RFC)                           KeyExch.   Encryption  Bits     Cipher Suite Name (OpenSSL)
+---------------------------------------------------------------------------------------------------------------------------------
+ xc030                                                     ECDH[0;32m 256[m   AESGCM      256     
+ xc028                                                     ECDH[0;32m 256[m   AES         256     
+ xc014                                                     ECDH[0;32m 256[m   AES         256     
+ x9f                                                       DH[0;32m 4096[m    AESGCM      256     
+ x6b                                                       DH[0;32m 4096[m    AES         256     
+ x39                                                       DH[0;32m 4096[m    AES         256     
+ x88                                                       DH[0;32m 4096[m    Camellia    256     
+ x9d                                                       RSA        AESGCM      256     
+ x3d                                                       RSA        AES         256     
+ x35                                                       RSA        AES         256     
+ x84                                                       RSA        Camellia    256     
+ xc02f                                                     ECDH[0;32m 256[m   AESGCM      128     
+ xc027                                                     ECDH[0;32m 256[m   AES         128     
+ xc013                                                     ECDH[0;32m 256[m   AES         128     
+ x9e                                                       DH[0;32m 4096[m    AESGCM      128     
+ x67                                                       DH[0;32m 4096[m    AES         128     
+ x33                                                       DH[0;32m 4096[m    AES         128     
+ x45                                                       DH[0;32m 4096[m    Camellia    128     
+ x9c                                                       RSA        AESGCM      128     
+ x3c                                                       RSA        AES         128     
+ x2f                                                       RSA        AES         128     
+ x41                                                       RSA        Camellia    128     
+
+[0;35mLocal problem: couldn't find client simulation data in /home/searphimlyx/ssl/etc/client-simulation.txt[m
+
+[7m Done 2017-11-21 21:45:56 [  58s] -->> 127.0.0.1:443 (www.yliu2867.com) <<--[m
+
+
