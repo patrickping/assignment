@@ -1,0 +1,22 @@
+As we’ve talked about in class a single TLS connection involves a lot of keys. In this question
+you will enumerate all of the keys used in a single TLS connection to google.ca. This includes
+all public, private, and secret keys exchanged or generated during a TLS handshake.
+
+Deliverables. Place answers in a directory Q4. First list the ciphersuite your browser connected
+under. The file then should have 3 columns: a description of the key (e.g., Google’s
+public ECDHE key), the name of the entities who know the key (e.g., everyone), and a sentence
+or two describing the purpose of the key (e.g., used for public key agreement).
+
+Answer: 1. Google.ca's public ECDHE key, everyone, sent to clients for public key agreement.
+		2. Google.ca's private ECDHE key, google.ca, to generate public key and form shared secret
+		3. Client's public ECDHE key, everyone, sent to google.ca for public key agreement.
+		4. Client's private ECDHE key, client, to generate public key and form shared secret.
+		5. Diffie-Hellman shared secret. Both Client and Google.ca, made by ECDHE key agreement and to make master secret.
+		6. Google.ca's signing key, google.ca, to sign Google.ca ECDHE public key
+		7. Google.ca's public key, everyone, to verify Google.ca ECDHE public key
+		8. Google Internet Authority G2 public key, everyone, to verify the Google.ca's certificate.
+		9. Google Internet Authority G2 signing key, Gooele Internet Authority G2, sign the Goole.ca's certificate
+		10. Geo Trust Global's public key, everyone, to verify Google Internet Authority G2 certificate.
+		11. Geo Trust Global's signing key, Geo Trust Global, to sign Google Internet Authority G2 certificate
+		12. Geo Trust Global's CA public key, everyone, to verify Goo Trust Global's certificate
+		13. Geo Trust Global's CA signing key, Geo Trust Global's CA, to sign Geo Trust Global's certficate.
