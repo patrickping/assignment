@@ -16,7 +16,5 @@ Answer: 1. Google.ca's public ECDHE key, everyone, sent to clients for public ke
 		7. Google.ca's public key, everyone, to verify Google.ca ECDHE public key
 		8. Google Internet Authority G2 public key, everyone, to verify the Google.ca's certificate.
 		9. Google Internet Authority G2 signing key, Gooele Internet Authority G2, sign the Goole.ca's certificate
-		10. Geo Trust Global's public key, everyone, to verify Google Internet Authority G2 certificate.
-		11. Geo Trust Global's signing key, Geo Trust Global, to sign Google Internet Authority G2 certificate
-		12. Geo Trust Global's CA public key, everyone, to verify Goo Trust Global's certificate
-		13. Geo Trust Global's CA signing key, Geo Trust Global's CA, to sign Geo Trust Global's certficate.
+		10. Geo Trust Global's public key, everyone, to verify Google Internet Authority G2 certificate and Geo Trust Global's certificate.
+		11. Geo Trust Global's signing key, Geo Trust Global, to sign Google Internet Authority G2 certificate and Geo Trust Global's certificate.
