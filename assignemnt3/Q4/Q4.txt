@@ -7,14 +7,21 @@ under. The file then should have 3 columns: a description of the key (e.g., Goog
 public ECDHE key), the name of the entities who know the key (e.g., everyone), and a sentence
 or two describing the purpose of the key (e.g., used for public key agreement).
 
-Answer: 1. Google.ca's public ECDHE key, everyone, sent to clients for public key agreement.
+Answer: 
+		Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+		1. Google.ca's public ECDHE key, everyone, sent to clients for public key agreement.
 		2. Google.ca's private ECDHE key, google.ca, to generate public key and form shared secret
 		3. Client's public ECDHE key, everyone, sent to google.ca for public key agreement.
 		4. Client's private ECDHE key, client, to generate public key and form shared secret.
-		5. Diffie-Hellman shared secret. Both Client and Google.ca, made by ECDHE key agreement and to make master secret.
+		5. Diffie-Hellman shared secret. Both Client and Google.ca, made by ECDHE key agreement and to make smaster secret.
 		6. Google.ca's signing key, google.ca, to sign Google.ca ECDHE public key
 		7. Google.ca's public key, everyone, to verify Google.ca ECDHE public key
 		8. Google Internet Authority G2 public key, everyone, to verify the Google.ca's certificate.
 		9. Google Internet Authority G2 signing key, Gooele Internet Authority G2, sign the Goole.ca's certificate
 		10. Geo Trust Global's public key, everyone, to verify Google Internet Authority G2 certificate and Geo Trust Global's certificate.
 		11. Geo Trust Global's signing key, Geo Trust Global, to sign Google Internet Authority G2 certificate and Geo Trust Global's certificate.
+		12. master secret, both client and server know it, used to generate symmetric key
+		13. client_write_MAC_key, client and server know it, used to make(client) and verify(server) MAC tag.
+		14. server_write_MAC_key, client and server know it, used to make(server) and verify(client) MAC tag.
+		15. client_write_key, client and server know it, used to symmetric encryption(client) and decryption(server).
+		16. server_write_key, client and server know it, used to symmetric encryption(server) and decryption(client).
