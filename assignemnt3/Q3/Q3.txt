@@ -9,11 +9,11 @@ answer the following questions. For each of the following which ciphersuite woul
 if:
 (a) Chrome 57 connected to whisperlab.org and the server picks
 	
-	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
 (b) Chrome 57 connected to whisperlab.org and the client picks
 	
-	LS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+	LS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 
 (c) Android 7.0 connected to uwo.ca and the client picks
 
